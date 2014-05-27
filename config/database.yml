@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: management_system_production
-  username: management_system
-  password: <%= ENV['MANAGEMENT_SYSTEM_DATABASE_PASSWORD'] %>
+  username: emkey
+  password:
