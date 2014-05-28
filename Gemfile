@@ -14,16 +14,14 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 gem 'devise'
-gem 'simple_form'
+gem 'simple_form', '~> 3.1.0.rc1'
 gem 'bootstrap-sass'
 gem 'haml'
 gem 'figaro'
 gem 'paperclip'
 gem 'html2haml'
 gem 'haml-rails'
-gem 'twitter-bootswatch-rails', '~> 3.1.1'
-gem 'twitter-bootswatch-rails-helpers'
-gem 'twitter-bootswatch-rails-fontawesome', :git => 'git://github.com/scottvrosenthal/twitter-bootswatch-rails-fontawesome.git'
+gem 'geocoder', '~> 1.2.1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
