@@ -2,3 +2,6 @@
   landing page
   =link_to "Sign in", new_user_session_path
   =link_to "Sign up", new_user_registration_path
+
+- if current_user
+  = link_to "Profile", user_path(current_user)

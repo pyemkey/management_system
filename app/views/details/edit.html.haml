@@ -1,0 +1,8 @@
+= simple_form_for(@detail, html: {class: "form-horizontal"}) do |f|
+  = f.error_notification
+  = f.input :first_name, autofocus: true
+  = f.input :last_name
+  = f.input :gender, as: :select, collection: Detail.genders, prompt: "Choose"
+  = f.input :marital_status, as: :select, collection: Detail.marital_statuses, prompt: "Choose"
+  = f.input :birthday, as: :date
+  = f.submit "Update"
