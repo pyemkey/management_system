@@ -1,0 +1,20 @@
+%ul
+  %li
+    %strong Company Name
+    = work_experience.company_name
+  %li
+    %strong Position
+    = work_experience.position
+  %li
+    %strong Start date
+    = format_date(work_experience.start_date)
+  %li
+    %strong End date 
+    = format_date(work_experience.end_date)
+  %li
+    %strong Location
+    = work_experience.location
+
+= link_to "Edit", [:edit, @user, work_experience]
+= link_to "Delete", user_work_experience_path(@user, work_experience), method: :delete
+%br

@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          :confirmable
   
   has_one :detail
+  has_many :work_experiences
   
   after_initialize do
    self.detail ||= self.build_detail

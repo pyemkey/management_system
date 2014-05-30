@@ -1,0 +1,7 @@
+= simple_form_for [@user, @work_experience]  do |f|
+  = f.input :company_name
+  = f.input :start_date, as: :date
+  = f.input :end_date, as: :date
+  = f.input :location
+  = f.input :position
+  = f.submit "#{@work_experience.new_record? ? "Create" : "Update"}"
