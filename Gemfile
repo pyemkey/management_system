@@ -15,13 +15,14 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'devise'
 gem 'simple_form', '~> 3.1.0.rc1'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.1.1.0'
 gem 'haml'
 gem 'figaro'
 gem 'paperclip'
 gem 'html2haml'
 gem 'haml-rails'
 gem 'geocoder', '~> 1.2.1'
+gem 'pry'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
