@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
   
   has_one :detail
   has_many :work_experiences
-  
+  has_many :educations
+
   after_initialize do
    self.detail ||= self.build_detail
   end

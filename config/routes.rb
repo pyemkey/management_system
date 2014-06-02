@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :edit, :update, :destroy] do
     resources :work_experiences
+    resources :educations
   end
   resources :details, only: [:edit, :update]
   

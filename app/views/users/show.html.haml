@@ -19,3 +19,8 @@
   = render @user.work_experiences
 
   = link_to "Add experience", new_user_work_experience_path(@user)
+
+#education
+  %h2 Educations
+  = render @user.educations
+  = link_to "Add Education", new_user_education_path(@user)

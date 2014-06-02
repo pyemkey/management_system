@@ -1,0 +1,20 @@
+%ul
+  %li
+    %strong School
+    = education.institution_name
+  %li
+    %strong From
+    = format_date(education.started_on)
+  %li
+    %strong To
+    = format_date(education.ended_on)
+  %li
+    %strong Thesis
+    = education.thesis_title
+  %li
+    %strong Degree 
+    = education.degree
+
+= link_to "Edit", [:edit, @user, education]
+= link_to "Delete", user_education_path(@user, education), method: :delete
+%br
