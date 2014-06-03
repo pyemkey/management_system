@@ -35,7 +35,8 @@ class EducationsController < ApplicationController
 private
   def secure_params
     params.require(:education).permit(
-      :institution_name, :started_on, :ended_on, :thesis_title, :degree) 
+      :institution_name, :started_on, :ended_on, :thesis_title, :degree,
+      :field_of_study) 
   end
   def set_user
     @user = User.find(params[:user_id]) 

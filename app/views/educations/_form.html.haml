@@ -2,6 +2,7 @@
   = f.input :institution_name, label: 'School', autofocus: true
   = f.input :started_on, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year, discard_day: true, discard_month: true
   = f.input :ended_on, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year, discard_day: true, discard_month: true
+  = f.input :field_of_study, label: 'Field of Study'
   = f.input :thesis_title, label: 'Thesis'
   = f.input :degree
   = f.submit "#{@education.new_record? ? "Save" : "Update"}" 
