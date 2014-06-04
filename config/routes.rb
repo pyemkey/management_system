@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :educations
   end
   resources :details, only: [:edit, :update]
+  resources :interests
   
 
   # The priority is based upon order of creation: first created -> highest priority.
