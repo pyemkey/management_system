@@ -24,3 +24,13 @@
   %h2 Educations
   = render @user.educations
   = link_to "Add Education", new_user_education_path(@user)
+
+#interests
+  %h2 Interests
+  - if @user.interests.any?
+    = render @user.interests
+  = simple_form_for @user.interests.new do |f|
+    = f.input :name, label: "Add new", placeholder: "You can provide more than one separate by comma"
+    = f.hidden_field :user, value: @user.id
+    = f.submit "Save" 
+  %br
