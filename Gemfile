@@ -23,6 +23,7 @@ gem 'html2haml'
 gem 'haml-rails'
 gem 'geocoder', '~> 1.2.1'
 gem 'pry'
+gem 'mailcatcher'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
