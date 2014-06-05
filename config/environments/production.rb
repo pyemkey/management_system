@@ -87,12 +87,12 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => 'utf-8'
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
+    address: 'smtp.mandrillapp.com',
     port: 587,
     domain: 'maginto.herokuapp.com',
     authentication: 'plain',
     enable_starttls_auto: true,
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"]
+    user_name: ENV["MANDRIL_U"],
+    password: ENV["MANDRIL_P"]
   }
 end
