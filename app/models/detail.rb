@@ -6,7 +6,12 @@ class Detail < ActiveRecord::Base
   
   ATTR_METHODS = [ :first_name, :first_name=, :last_name, 
                    :last_name=, :marital_status, :marital_status=, 
-                   :gender, :gender=, :birthday, :birthday= ]
+                   :gender, :gender=, :birthday, :birthday=, 
+                   :interest_list, :interest_list= ]
+
+
+  acts_as_taggable
+  acts_as_taggable_on :interests
 
   def gender=(g)
     self[:gender] = g.to_i

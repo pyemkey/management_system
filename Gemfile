@@ -23,6 +23,7 @@ gem 'html2haml'
 gem 'haml-rails'
 gem 'geocoder', '~> 1.2.1'
 gem 'pry'
+gem 'acts-as-taggable-on'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

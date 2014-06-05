@@ -1,0 +1,10 @@
+%p 
+  %strong I am 
+  = @user.gender
+%p 
+  %strong Marital status
+  = @user.marital_status
+%p 
+  %strong Birthday 
+  = format_date(@user.birthday)
+= link_to "Edit", edit_detail_path(@user.detail)

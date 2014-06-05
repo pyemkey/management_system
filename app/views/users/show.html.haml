@@ -2,25 +2,22 @@
 
 .basic_information
   %h2 Basic Informations
-  %p 
-    %strong I am 
-    = @user.gender
-  %p 
-    %strong Marital status
-    = @user.marital_status
-  %p 
-    %strong Birthday 
-    = format_date(@user.birthday)
-
-  = link_to "Edit", edit_detail_path(@user.detail)
+  = render @user.detail
 
 .work_experiences
   %h2 Work Experience
   = render @user.work_experiences
-
   = link_to "Add experience", new_user_work_experience_path(@user)
 
 #education
   %h2 Educations
   = render @user.educations
   = link_to "Add Education", new_user_education_path(@user)
+
+#interests
+  %h2 Interests
+  = render 'details/interest_form'
+  - if @user.interest_list.any?
+    %ul
+      - @user.interest_list.each do |interest|
+        %li= interest
