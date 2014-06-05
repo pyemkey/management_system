@@ -52,7 +52,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'mailcatcher'
 end
-
+gem 'rails_12factor', group: :production
 group :test do
   gem 'faker'
   gem 'capybara'
