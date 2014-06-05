@@ -23,7 +23,6 @@ gem 'html2haml'
 gem 'haml-rails'
 gem 'geocoder', '~> 1.2.1'
 gem 'pry'
-gem 'mailcatcher'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -51,6 +50,7 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'mailcatcher'
 end
 
 group :test do
