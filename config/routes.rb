@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   end
   resources :details, only: [:edit, :update]
   resources :interests
+  resources :skills
 end
