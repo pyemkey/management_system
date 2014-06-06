@@ -7,7 +7,8 @@ class Detail < ActiveRecord::Base
   ATTR_METHODS = [ :first_name, :first_name=, :last_name, 
                    :last_name=, :marital_status, :marital_status=, 
                    :gender, :gender=, :birthday, :birthday=, 
-                   :interest_list, :interest_list= ]
+                   :interest_list, :interest_list=, :skill_list,
+                   :skill_list= ]
 
 
   acts_as_taggable
