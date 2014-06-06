@@ -16,8 +16,5 @@
 
 #interests
   %h2 Interests
+  = render 'users/interest_list'
   = render 'details/interest_form'
-  - if @user.interest_list.any?
-    %ul
-      - @user.interest_list.each do |interest|
-        %li= interest
