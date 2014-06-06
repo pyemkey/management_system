@@ -1,4 +1,6 @@
 - if @user.interest_list.any?
   %ul
     - @user.interest_list.each do |interest|
-      %li= interest
+      %li
+        = interest 
+        =link_to 'Delete', interest_path(name: interest), method: :delete 
