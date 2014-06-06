@@ -6,8 +6,8 @@ class InterestsController < ApplicationController
   end
 
   def destroy
-    interest = Interest.find(params[:id])
-    current_user.interests.delete interest
+    current_user.interest_list.remove(params[:name])
+    current_user.detail.save
     redirect_to current_user  
   end
 

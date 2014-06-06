@@ -12,6 +12,7 @@ private
   def secure_params
     params.require(:detail).permit(:first_name, :last_name,
                                    :gender, :marital_status, 
-                                   :birthday, :interest_list) 
+                                   :birthday, :interest_list,
+                                   :skill_list) 
   end
 end

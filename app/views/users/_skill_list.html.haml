@@ -1,4 +1,6 @@
 - if @user.skill_list.any?
   %ul
     - @user.skill_list.each do |skill|
-      %li= skill
+      %li
+        = skill
+        =link_to 'Delete', skill_path(name: skill), method: :delete 

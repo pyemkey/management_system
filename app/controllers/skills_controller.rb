@@ -2,12 +2,13 @@ class SkillsController < ApplicationController
   def create
     user = User.find(params[:skill][:user])
     user.skill_list = params[:skill][:name]
+    binding.pry
     redirect_to user
   end
 
   def destroy
-    skill = Skill.find(params[:id])
-    current_user.skills.delete skill
+    current_user.skill_list.remove(params[:name])
+    current_user.detail.save
     redirect_to current_user  
   end
 
