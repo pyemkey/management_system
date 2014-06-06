@@ -8,22 +8,12 @@ class User < ActiveRecord::Base
   has_one :detail
   has_many :work_experiences
   has_many :educations
-  has_many :skill_users
-  has_many :skills, through: :skill_users
 
   after_initialize do
    self.detail ||= self.build_detail
   end
   
   delegate *Detail::ATTR_METHODS, to: :detail
-
-  def skill_list=(input)
-    names = input.split(',').collect{|text| text.strip.downcase} 
-    names.each do |name|
-      skill = Skill.where(name: name).first_or_create
-      self.skills << skill unless self.skills.include?(skill)
-    end
-  end
 
   def to_s
     "#{first_name} #{last_name}" 

@@ -11,7 +11,7 @@ class Detail < ActiveRecord::Base
 
 
   acts_as_taggable
-  acts_as_taggable_on :interests
+  acts_as_taggable_on :interests, :skills
 
   def gender=(g)
     self[:gender] = g.to_i

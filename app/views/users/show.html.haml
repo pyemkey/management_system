@@ -21,10 +21,5 @@
 
 #skills
   %h2 Skills
-  - if @user.skills.any?
-    = render @user.skills
-
-  = simple_form_for @user.skills.new do |f|
-    = f.input :name, label: "Add new", placeholder: "You can provide more than one separate by comma"
-    = f.hidden_field :user, value: @user.id
-    = f.submit "Save"
+  = render 'users/skill_list'
+  = render 'details/skill_form'

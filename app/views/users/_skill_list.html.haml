@@ -1,0 +1,4 @@
+- if @user.interest_list.any?
+  %ul
+    - @user.interest_list.each do |interest|
+      %li= interest
