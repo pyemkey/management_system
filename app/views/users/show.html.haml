@@ -2,22 +2,11 @@
 
 .basic_information
   %h2 Basic Informations
-  %p 
-    %strong I am 
-    = @user.gender
-  %p 
-    %strong Marital status
-    = @user.marital_status
-  %p 
-    %strong Birthday 
-    = format_date(@user.birthday)
-
-  = link_to "Edit", edit_detail_path(@user.detail)
+  = render @user.detail
 
 .work_experiences
   %h2 Work Experience
   = render @user.work_experiences
-
   = link_to "Add experience", new_user_work_experience_path(@user)
 
 #education
@@ -27,12 +16,8 @@
 
 #interests
   %h2 Interests
-  - if @user.interests.any?
-    = render @user.interests
-  = simple_form_for @user.interests.new do |f|
-    = f.input :name, label: "Add new", placeholder: "You can provide more than one separate by comma"
-    = f.hidden_field :user, value: @user.id
-    = f.submit "Save" 
+  = render 'users/interest_list'
+  = render 'details/interest_form'
 
 #skills
   %h2 Skills

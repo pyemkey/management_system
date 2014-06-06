@@ -43,22 +43,6 @@ ActiveRecord::Schema.define(version: 20140605123302) do
 
   add_index "educations", ["user_id"], name: "index_educations_on_user_id", using: :btree
 
-  create_table "interest_users", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "interest_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "interest_users", ["interest_id"], name: "index_interest_users_on_interest_id", using: :btree
-  add_index "interest_users", ["user_id"], name: "index_interest_users_on_user_id", using: :btree
-
-  create_table "interests", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "skill_users", force: true do |t|
     t.integer  "user_id"
     t.integer  "skill_id"
